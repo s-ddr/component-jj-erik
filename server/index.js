@@ -24,6 +24,7 @@ app.use((req, res, next) => {
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(cors());
 
 app.get('/api/product/:id', cors(), get);
 

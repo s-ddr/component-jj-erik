@@ -8,14 +8,14 @@ db.once('open', function() {
 });
 
 var productSchema = new mongoose.Schema({
-  id: Number,
+  item_id: Number,
   productName: String,
   type: String,
   imageDefault: String,
-  images: [],
+  images: [], // 6
   colors: [{name: String, url: String, image: String}],
   price: Number,
-  gallery: []
+  gallery: [] // min 3
 });
 
 var Product = mongoose.model('product', productSchema);
