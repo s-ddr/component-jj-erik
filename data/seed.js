@@ -4,7 +4,7 @@ const Product = require('../database/index.js');
 const data = 
 [
   {																													
-    "id": 0,																													
+    "item_id": 0,																													
     "productName":"auburn chair",																													
     "type": "Living Room Chairs",																												
     "imageDefault": "http://carousel-we.s3-us-west-1.amazonaws.com/00/00.jpg",																													
@@ -15,18 +15,18 @@ const data =
     "gallery": [ "https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"],																													
   },
   {
-    "id": 1,
+    "item_id": 1,
     "productName": "viv swivel chair",
     "type": "Living Room Chairs",
     "imageDefault": `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-00-default.jpg`,
     "images": [`http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-00-default.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-01.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-02.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-03.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-04.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-05.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-06.jpg`, 
     `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-07.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-08.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-09.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-11.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-12.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-13.jpg`, `http://carousel-we.s3-us-west-1.amazonaws.com/01/viv-swivel-chair-14.jpg` ],
-    "colors": [ {"name": "Distressed Velvet, Light Pink", "url": `http://carousel-we.s3-us-west-1.amazonaws.com/01/pink-wide.jpg` , "image": `http://carousel-we.s3-us-west-1.amazonaws.com/01/pink-image.jpg` }, {"name": "Distressed Velvet, Light Taupe" , "url": `http://carousel-we.s3-us-west-1.amazonaws.com/01/taupe-wide.jpg` , "image": `http://carousel-we.s3-us-west-1.amazonaws.com/01/taupe-image.jpg` }, {"name": "Luxe Boucle, White" , "url": `http://carousel-we.s3-us-west-1.amazonaws.com/01/white-wide.jpg` , "image": `http://carousel-we.s3-us-west-1.amazonaws.com/01/white-image.jpg` } ],
+    "colors": [ {"name": "Distressed Velvet, Light Pink", "url": `http://carousel-we.s3-us-west-1.amazonaws.com/01/pink-witem_ide.jpg` , "image": `http://carousel-we.s3-us-west-1.amazonaws.com/01/pink-image.jpg` }, {"name": "Distressed Velvet, Light Taupe" , "url": `http://carousel-we.s3-us-west-1.amazonaws.com/01/taupe-witem_ide.jpg` , "image": `http://carousel-we.s3-us-west-1.amazonaws.com/01/taupe-image.jpg` }, {"name": "Luxe Boucle, White" , "url": `http://carousel-we.s3-us-west-1.amazonaws.com/01/white-witem_ide.jpg` , "image": `http://carousel-we.s3-us-west-1.amazonaws.com/01/white-image.jpg` } ],
     "price": 699,
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg" ],
  },
  {
-    "id":2,
+    "item_id":2,
     "productName":"Andes Terminal Chaise Sectional",
     "type": "Living Room Chairs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/02/00.jpg",
@@ -36,7 +36,7 @@ const data =
     "gallery": ["http://carousel-we.s3-us-west-1.amazonaws.com/02/gallery1.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/02/gallery2.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/02/gallery3.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/02/gallery4.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/02/gallery5.jpg"]
   },
   {
-    "id":3,
+    "item_id":3,
     "productName":"Ryder Leather Chair",
     "type": "Living Room Chairs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/03/00.jpg",
@@ -46,7 +46,7 @@ const data =
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"]
   },
   {
-    "id":4,
+    "item_id":4,
     "productName":"Ruby Slipper Chair",
     "type": "Living Room Chairs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/04/00.jpg",
@@ -56,7 +56,7 @@ const data =
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"]
   },
   {
-    "id":5,
+    "item_id":5,
     "productName":"Silhouette Pedestal Dining Table",
     "type": "Dining Room Tables",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/05/00.jpg",
@@ -66,8 +66,8 @@ const data =
     gallery: ["http://carousel-we.s3-us-west-1.amazonaws.com/05/gallery1.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/05/gallery2.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/05/gallery3.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/05/gallery4.jpg"]
   },
   {
-    "id":6,
-    "productName":"Mid-Century Leather Show Wood Chair",
+    "item_id":6,
+    "productName":"Mitem_id-Century Leather Show Wood Chair",
     "type":"Living Room Chairs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/06/00.jpg",
     "images": ["http://carousel-we.s3-us-west-1.amazonaws.com/06/00.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/01.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/02.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/03.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/04.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/05.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/06.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/07.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/08.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/09.jpg"],
@@ -76,8 +76,8 @@ const data =
     gallery: ["http://carousel-we.s3-us-west-1.amazonaws.com/06/gallery1.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/gallery2.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/gallery3.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/06/gallery4.jpg"]
   },
   {
-    "id":7,
-    "productName":"Carlo Leather Mid-Century Chair",
+    "item_id":7,
+    "productName":"Carlo Leather Mitem_id-Century Chair",
     "type":"Living Room Chairs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/07/00.jpg",
     "images": ["http://carousel-we.s3-us-west-1.amazonaws.com/07/00.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/01.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/02.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/03.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/04.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/05.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/06.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/07.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/08.jpg"],
@@ -86,7 +86,7 @@ const data =
     "gallery": ["http://carousel-we.s3-us-west-1.amazonaws.com/07/gallery1.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/gallery2.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/gallery3.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/gallery4.jpg", "http://carousel-we.s3-us-west-1.amazonaws.com/07/gallery5.jpg"]
   },
   {
-    "id":8,
+    "item_id":8,
     "productName":"Cozy Swivel Chair",
     "type":"Living Room Chairs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/08/00.jpg",
@@ -96,7 +96,7 @@ const data =
     "gallery": ["http://carousel-we.s3-us-west-1.amazonaws.com/08/gallery1.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/08/gallery2.jpeg","http://carousel-we.s3-us-west-1.amazonaws.com/08/gallery3.jpeg","http://carousel-we.s3-us-west-1.amazonaws.com/08/gallery4.jpeg"]
   },
   {
-    "id":9,
+    "item_id":9,
     "productName":"Tripod Dining Table",
     "type":"Dining Room Tables",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/09/00.jpg",
@@ -106,7 +106,7 @@ const data =
     "gallery": ["http://carousel-we.s3-us-west-1.amazonaws.com/09/gallery1.jpeg","http://carousel-we.s3-us-west-1.amazonaws.com/09/gallery2.jpeg","http://carousel-we.s3-us-west-1.amazonaws.com/09/gallery3.jpeg","http://carousel-we.s3-us-west-1.amazonaws.com/09/gallery4.jpeg"]
   },
   {
-    "id":10,
+    "item_id":10,
     "productName":"Tripod Dining Table",
     "type":"Sofas",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/10/00.jpg",
@@ -116,7 +116,7 @@ const data =
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"]
   },
   {
-    "id":11,
+    "item_id":11,
     "productName":  "Streamline Bookshelf - Whitewashed Mango Wood",
     "type":"Bookshelfs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/11/00.jpg",
@@ -126,7 +126,7 @@ const data =
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"]
   },
   {
-    "id":12,
+    "item_id":12,
     "productName":"Industrial Storage Pop-Up Coffee Table",
     "type":"Coffee Tables",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/12/00.jpg",
@@ -136,7 +136,7 @@ const data =
     "gallery": ["http://carousel-we.s3-us-west-1.amazonaws.com/12/gallery1.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/12/gallery2.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/12/gallery3.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/12/gallery4.jpg"]
   },
   {
-    "id":13,
+    "item_id":13,
     "productName":"Delphine Buffet",
     "type":"Kitchen Furniture",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/13/00.jpg",
@@ -146,7 +146,7 @@ const data =
     "gallery": ["http://carousel-we.s3-us-west-1.amazonaws.com/13/gallery1.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/13/gallery2.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/13/gallery3.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/13/gallery4.jpg"]
   },
   {
-    "id":14,
+    "item_id":14,
     "productName":"Woven Leather Barstool",
     "type":"Counter Stools",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/14/00.jpg",
@@ -156,7 +156,7 @@ const data =
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"]
   },
   {
-    "id":15,
+    "item_id":15,
     "productName":"Gold Dipped Barstool",
     "type":"Counter Stools",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/15/00.jpg",
@@ -166,17 +166,17 @@ const data =
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"]
   },
   {
-    "id":16,
+    "item_id":16,
     "productName":"Cord Stripe Indoor/Outdoor Rug",
     "type":"Rugs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/16/00.jpg",
-    "images": ["http://carousel-we.s3-us-west-1.amazonaws.com/16/00.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/01-coral-image.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/01.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/02.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/03-midnight-image.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/04.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/05.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/06.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/07.jpg"],
-    "colors": [{"name":"Midnight", "url":"http://carousel-we.s3-us-west-1.amazonaws.com/16/midnight.jpg", "image":"http://carousel-we.s3-us-west-1.amazonaws.com/16/03-midnight-image.jpg"},{"name":"Coral", "url":"http://carousel-we.s3-us-west-1.amazonaws.com/16/coral.jpg", "image":"http://carousel-we.s3-us-west-1.amazonaws.com/16/01-coral-image.jpg"}],
+    "images": ["http://carousel-we.s3-us-west-1.amazonaws.com/16/00.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/01-coral-image.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/01.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/02.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/03-mitem_idnight-image.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/04.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/05.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/06.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/16/07.jpg"],
+    "colors": [{"name":"Mitem_idnight", "url":"http://carousel-we.s3-us-west-1.amazonaws.com/16/mitem_idnight.jpg", "image":"http://carousel-we.s3-us-west-1.amazonaws.com/16/03-mitem_idnight-image.jpg"},{"name":"Coral", "url":"http://carousel-we.s3-us-west-1.amazonaws.com/16/coral.jpg", "image":"http://carousel-we.s3-us-west-1.amazonaws.com/16/01-coral-image.jpg"}],
     "price":299,
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"]
   },
   {
-    "id":17,
+    "item_id":17,
     "productName":"Vines Wool Rug",
     "type":"Rugs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/17/00.jpg",
@@ -186,7 +186,7 @@ const data =
     "gallery": ["http://carousel-we.s3-us-west-1.amazonaws.com/17/gallery1.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/17/gallery2.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/17/gallery3.jpg","http://carousel-we.s3-us-west-1.amazonaws.com/17/gallery4.jpg"]
   },
   {
-    "id":18,
+    "item_id":18,
     "productName":"Beacon Rug",
     "type":"Rugs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/18/00.jpg",
@@ -196,7 +196,7 @@ const data =
     "gallery": ["https://i.imgur.com/7bhsMY3.jpg", "https://i.imgur.com/iGbIKJD.jpg", "https://i.imgur.com/USgnFaC.jpg", "https://i.imgur.com/Srsyleh.jpg", "https://i.imgur.com/UDrfhjJ.jpg", "https://i.imgur.com/9E3WqkA.jpg"],
   },
   {
-    "id":19,
+    "item_id":19,
     "productName":"Cozy Plush Rug",
     "type":"Rugs",
     "imageDefault":"http://carousel-we.s3-us-west-1.amazonaws.com/19/00.jpg",
