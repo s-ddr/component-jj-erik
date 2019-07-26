@@ -2,7 +2,7 @@ const express = require('express');
 const parser = require('body-parser');
 const path = require('path');
 const cors = require('cors')
-const { get } = require('./controllers.js');
+const router = require('./router.js');
 
 const app = express();
 const port = 3003;
@@ -26,6 +26,6 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
 
-app.get('/api/product/:id', cors(), get);
+app.use('/api', router);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
