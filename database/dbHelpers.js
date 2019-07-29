@@ -1,7 +1,7 @@
-const Product = require('./index.js');
+const Product = require('./postgreSchema.js');
 
 const get = (item_id) => {
-  return Product.find({ item_id })
+  return Product.find({ item_id }).limit(1);
 }
 
 const remove = (item_id) => {
