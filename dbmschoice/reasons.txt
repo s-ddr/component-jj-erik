@@ -1,0 +1,33 @@
+I'm choosing MongoDB for my DBMS. 
+
+After benchmarking query speeds I found the performance to be fairly even,
+with Postgres having about a 1ms advantage when querying by id and getting specific info.
+However to get all information possible about a product it would be about 3x slower using 
+Postgres due to the complexity of the queries.
+
+Due to the nature of the application, i.e. we always need all the information about a product
+to render our page correctly, having our data split into seperate tables provides
+no practical benefit to the use of our application. For example I never need to know 
+the information about a color on its own, I always need it in the context of a product.
+
+In addition, since this dataset is full of 4 different many to many relationships,
+having to populate the join tables made the file size of the Postgres database
+4.8 gb, while the MongoDB database was 2.9 gb.
+
+Finally the last reason to choose MongoDB over Postgres is that since the information
+being stored does not need to be instantly verified via transactions, and does not contain
+private/sensitive data, it doesn't have to be completely acid compliant.
+
+
+
+UPDATE
+
+I've begun querying by name and the speeds so far are drastically different.
+Looking into ways of optimizing by mongoDb queries.
+
+I've now added a text index to the field instead of just a normal one and that has drastically reduced 
+the querty time so that now the mongo searches are actually faster than the postgres. 
+
+Will still be using mongoDB.
+
+
