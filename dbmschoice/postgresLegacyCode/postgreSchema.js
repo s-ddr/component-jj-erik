@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = require('./postgreSequelize.js');
+const db = require('../../database/postgreSequelize.js');
 
 
 const Product = db.define('product', {
