@@ -12,10 +12,15 @@ router
   .route('/product')
   .post(controllers.post)  
 
-// router
-//   .route('/product/?name')  
+router
+  .route('/product:name?')  
+  .get(controllers.getByName)
 
-
+router.route('*.js.gz')
+  .get((req, res, next) => {
+    res.set('Content-Encoding', 'gzip');
+    next();
+  });  
 
 
 module.exports = router;

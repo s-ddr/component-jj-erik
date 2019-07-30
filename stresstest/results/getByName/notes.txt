@@ -1,0 +1,183 @@
+100 RPS has very poor performance.
+
+It looks like I may need to adjust either the database query or database structure.
+
+Interesting thing to note,
+When I make the queries for this in my mongo shell, they return 
+nearly instantly, but when I add .explain("executionStats") it
+says the query is going to take an immense amount of time, but in
+practice I know that to be false.
+
+
+Attempt #2:
+
+I changed my database query to instead look for an exact match
+using the text index in my database. It had no effect on the 
+server stress testing, or in attempting to measure execution time
+in mongo. 
+
+
+
+
+
+
+
+
+
+The following is the detailed results for 100 RPS
+
+
+
+
+
+Started phase 0, duration: 60s @ 11:51:16(-0700) 2019-07-30
+Report @ 11:51:26(-0700) 2019-07-30
+Elapsed time: 10 seconds
+  Scenarios launched:  999
+  Scenarios completed: 701
+  Requests completed:  701
+  RPS sent: 100.5
+  Request latency:
+    min: 96.2
+    max: 3168.4
+    median: 1784.5
+    p95: 2887.7
+    p99: 3060.8
+  Codes:
+    200: 701
+
+Warning:
+CPU usage of Artillery seems to be very high (pids: 4202)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:51:36(-0700) 2019-07-30
+Elapsed time: 20 seconds
+  Scenarios launched:  1000
+  Scenarios completed: 783
+  Requests completed:  783
+  RPS sent: 100.1
+  Request latency:
+    min: 2722.3
+    max: 5580
+    median: 3952.4
+    p95: 5205.1
+    p99: 5439.9
+  Codes:
+    200: 783
+
+Report @ 11:51:46(-0700) 2019-07-30
+Elapsed time: 30 seconds
+  Scenarios launched:  1000
+  Scenarios completed: 755
+  Requests completed:  755
+  RPS sent: 100.1
+  Request latency:
+    min: 2753.8
+    max: 8363.4
+    median: 6694.4
+    p95: 7927.2
+    p99: 8192.2
+  Codes:
+    200: 755
+
+Warning: High CPU usage warning (pids: 4202).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:51:56(-0700) 2019-07-30
+Elapsed time: 40 seconds
+  Scenarios launched:  1000
+  Scenarios completed: 767
+  Requests completed:  767
+  RPS sent: 100
+  Request latency:
+    min: 2799.1
+    max: 10987.3
+    median: 9360.9
+    p95: 10573.8
+    p99: 10847
+  Codes:
+    200: 767
+
+Report @ 11:52:06(-0700) 2019-07-30
+Elapsed time: 50 seconds
+  Scenarios launched:  1000
+  Scenarios completed: 746
+  Requests completed:  746
+  RPS sent: 100.1
+  Request latency:
+    min: 2913
+    max: 14001.2
+    median: 12026.9
+    p95: 13531.2
+    p99: 13811.8
+  Codes:
+    200: 746
+
+Warning: High CPU usage warning (pids: 4202).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:52:16(-0700) 2019-07-30
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  1000
+  Scenarios completed: 737
+  Requests completed:  737
+  RPS sent: 100.1
+  Request latency:
+    min: 2914
+    max: 16803.1
+    median: 14961.8
+    p95: 16441.5
+    p99: 16654.1
+  Codes:
+    200: 737
+
+Warning: High CPU usage warning (pids: 4202).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:52:26(-0700) 2019-07-30
+Elapsed time: 1 minute, 10 seconds
+  Scenarios launched:  1
+  Scenarios completed: 798
+  Requests completed:  798
+  RPS sent: 0.1
+  Request latency:
+    min: 3335.8
+    max: 18713.6
+    median: 17919.2
+    p95: 18526.5
+    p99: 18646.8
+  Codes:
+    200: 798
+
+Report @ 11:52:35(-0700) 2019-07-30
+Elapsed time: 1 minute, 18 seconds
+  Scenarios launched:  0
+  Scenarios completed: 713
+  Requests completed:  713
+  RPS sent: NaN
+  Request latency:
+    min: 17669.5
+    max: 19156.7
+    median: 18499
+    p95: 18959.6
+    p99: 19080.8
+  Codes:
+    200: 713
+
+All virtual users finished
+Summary report @ 11:52:35(-0700) 2019-07-30
+  Scenarios launched:  6000
+  Scenarios completed: 6000
+  Requests completed:  6000
+  RPS sent: 76.41
+  Request latency:
+    min: 96.2
+    max: 19156.7
+    median: 9532.5
+    p95: 18590.2
+    p99: 18896.6
+  Scenario counts:
+    0: 6000 (100%)
+  Codes:
+    200: 6000

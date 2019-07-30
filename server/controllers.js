@@ -5,8 +5,6 @@ const makeProduct = require('../data/makeProduct.js');
 const compareKeys = (a, b) => {
   var aKeys = Object.keys(a).sort();
   var bKeys = Object.keys(b).sort();
-  console.log(aKeys);
-  console.log(bKeys);
   return JSON.stringify(aKeys) === JSON.stringify(bKeys);
 }
 
@@ -21,8 +19,18 @@ const get = (req, res) => {
     })
 }
 
+const getByName = (req, res) => {
+  dbHelpers.get100ByName(req.query.name)
+  .then((data) => {
+    res.status(200).send(data)
+  })
+  .catch((err) => {
+    res.status(404);
+  })
+}
+
 const post = (req, res) => {
-  var randomObj = makeProduct();
+  var randomObj = makeProduct('mongo');
   var object = compareKeys(req.body, randomObj) ? req.body : randomObj;
   dbHelpers.insert(object)
   .then((response) => {
@@ -53,4 +61,4 @@ const remove = (req, res) => {
     })
 }
 
-module.exports = { get, remove, put, post };
+module.exports = { get, getByName, remove, put, post };

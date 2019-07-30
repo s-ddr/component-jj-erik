@@ -9,3 +9,5 @@ coverage
 /data/products.json
 /data/products.csv
 /data/jointable.csv
+newrelic.js
+newrelic_agent.log
