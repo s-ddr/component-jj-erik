@@ -1,11 +1,11 @@
-const Product = require('./postgreSchema.js');
+const Product = require('./index.js');
 
 const get = (item_id) => {
   return Product.find({ item_id }).limit(1)
 }
 
 const get100ByName = (name) => {
-  var query = new RegExp(name, i);
+  var query = new RegExp(name, 'i')
   return Product.find({productName: query}).limit(100)
 }
 

@@ -1,31 +1,47 @@
+require('newrelic');
 const express = require('express');
 const parser = require('body-parser');
 const path = require('path');
 const cors = require('cors')
 const router = require('./router.js');
+const cluster = require('cluster');
+const numCpus = require('os').cpus().length;
+const headers = require('./headers.js');
+
 
 const app = express();
 const port = 3003;
 
-app.get('*.js.gz', (req, res, next) => {
-  res.set('Content-Encoding', 'gzip');
-  next();
-});
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Request-Headers", "*");
-  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  res.header("Access-Control-Allow-Credentials", "true");
-  next();
-});
-
+app.use(headers);
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
-
 app.use('/api', router);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+if (cluster.isMaster) {
+  console.log(`Master ${process.pid} is running`);
+
+  // Fork workers.
+  for (let i = 0; i < numCpus; i++) {
+    cluster.fork();
+  }
+
+  //Check if work id is died
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`worker ${worker.process.pid} died`);
+  });
+
+} else {
+  // This is Workers can share any TCP connection
+  // It will be initialized using express
+  console.log(`Worker ${process.pid} started`);
+
+  app.get('/cluster', (req, res) => {
+    let worker = cluster.worker.id;
+    res.send(`Running on worker with id ==> ${worker}`);
+  });
+
+  app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+}

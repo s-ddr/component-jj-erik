@@ -9,8 +9,3 @@
   - https://github.com/unclesam-hr/component-overview
 
 ## Setup
-```$ npm install
-$ npm start
-$ npm run seed
-$ npm run build
-```

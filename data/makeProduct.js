@@ -21,9 +21,3 @@ module.exports = (db, i) => {
   }
 }
 
-
-
-// product: getName(),
-// type: Math.floor(Math.random() * 130),
-// imageDefault: makeImages(1)[0],
-// price: getPrice(),
