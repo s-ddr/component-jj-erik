@@ -1,4 +1,4 @@
-const makeProduct = require('./makeProduct.js');
+const makeProduct = require('../../data/makeProduct.js');
 const fs = require('fs')
 const csvStream = fs.createWriteStream('./products.csv');
 

@@ -1,5 +1,5 @@
-const db = require('../database/postgreSequelize.js');
-const models = require('../database/postgreSchema.js');
+const db = require('../dbmschoice/postgresLegacyCode/postgreSequelize.js/index.js');
+const models = require('../dbmschoice/postgresLegacyCode/postgreSchema.js/index.js');
 
 // db.sync({force:true});
 

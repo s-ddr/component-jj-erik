@@ -13,6 +13,17 @@ id#    time in ms
 10000000    0.230
 
 
+querying to find 100 by name: 
+
+* again not all information retrieved * 
+
+name     time in ms
+--------------------
+%na%           4.7
+%Gi%           6.24
+
+
+
 
 ----List of values associated with a product-----
 galleries.url
@@ -56,3 +67,12 @@ id#    time in ms
 1000000         2
 5000000         3
 10000000        2
+
+
+
+querying to find 100 by name: 
+
+name     time in ms
+--------------------
+/na/i              1
+/gi/i              4
