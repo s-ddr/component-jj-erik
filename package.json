@@ -1,5 +1,5 @@
 {
-  "name": "component-jj",
+  "name": "component-jj-backend",
   "version": "1.0.0",
   "description": "Product Carousel",
   "main": "index.js",
@@ -9,57 +9,20 @@
   },
   "license": "ISC",
   "scripts": {
-    "start": "nodemon server/index.js",
-    "build": "webpack -d --watch",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.5.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.5.4",
-    "@babel/preset-react": "^7.0.0",
-    "babel-jest": "^24.8.0",
-    "compression-webpack-plugin": "^3.0.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "jest": "^24.8.0",
-    "nodemon": "^1.19.1",
-    "react-test-renderer": "^16.8.6",
-    "webpack": "^4.35.2",
-    "babel-loader": "^8.0.6",
-    "webpack-cli": "^3.3.5"
+    "start": "nodemon server/index.js"
   },
   "dependencies": {
     "axios": "^0.19.0",
     "cors": "^2.8.5",
-    "csv-write-stream": "^2.0.0",
-    "csv-writer": "^1.5.0",
     "express": "^4.17.1",
-    "faker": "^4.1.0",
     "mongoose": "^5.6.2",
     "newrelic": "^5.10.0",
-    "pg": "^7.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
     "react-id-swiper": "^2.3.1",
     "react-image-magnify": "^2.7.4",
-    "sequelize": "^5.10.3",
     "swiper": "^4.5.0"
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": -10
-      }
-    }
   },
   "homepage": "https://github.com/unclesam-hr/component-jj#readme"
 }

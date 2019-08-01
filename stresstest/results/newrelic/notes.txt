@@ -1,1 +1,0 @@
-In this folder are screenshots of my new relic dashboard after running stress tests via artillery.
