@@ -5,8 +5,7 @@ const get = (item_id) => {
 }
 
 const get100ByName = (name) => {
-  var query = new RegExp(name, 'i')
-  return Product.find({productName: query}).limit(100)
+  return Product.find( { $text: { $search: name}}).limit(24)
 }
 
 const remove = (item_id) => {

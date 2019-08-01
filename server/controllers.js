@@ -15,7 +15,7 @@ const get = (req, res) => {
       res.status(200).send(data)
     })
     .catch((err) => {
-      res.status(404);
+      res.status(404).send(err);
     })
 }
 
@@ -25,7 +25,7 @@ const getByName = (req, res) => {
     res.status(200).send(data)
   })
   .catch((err) => {
-    res.status(404);
+    res.status(404).send(err);
   })
 }
 
