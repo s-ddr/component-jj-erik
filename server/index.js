@@ -1,3 +1,4 @@
+// UNCOMMENT ONCE KEY IS ADDED 
 require('newrelic');
 const express = require('express');
 const parser = require('body-parser');
@@ -6,14 +7,12 @@ const cors = require('cors')
 const router = require('./router.js');
 const cluster = require('cluster');
 const numCpus = require('os').cpus().length;
-const headers = require('./headers.js');
 
 
 const app = express();
 const port = 3003;
 
 
-app.use(headers);
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));

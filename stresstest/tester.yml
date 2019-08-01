@@ -2,11 +2,17 @@ config:
   target: 'http://localhost:3003/api'
   phases:
     - duration: 30
-      arrivalRate: 10
-      rampTo: 100
+      arrivalRate: 1
+      rampTo: 5
     - duration: 60
-      arrivalRate: 100
+      arrivalRate: 5
+  processor: "./my-functions.js"
+
+
 scenarios:
   - flow:
-    - post:
-        url: '/product/'
+    - loop:
+      - function: "randomId"
+      - get:
+          url: '/product/{{id}}'
+    count: 1000
