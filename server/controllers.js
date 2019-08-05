@@ -1,5 +1,6 @@
 const dbHelpers = require('../database/dbHelpers.js');
 const makeProduct = require('../data/makeProduct.js');
+const cache = require('redis').createClient();
 
 
 const compareKeys = (a, b) => {
@@ -12,7 +13,8 @@ const get = (req, res) => {
   const id = req.params.id
   dbHelpers.get(id)
     .then((data) => {
-      res.status(200).send(data)
+      cache.setex(id, 3000, JSON.stringify(data));
+      res.status(200).send(data);
     })
     .catch((err) => {
       res.status(404).send(err);
@@ -22,11 +24,32 @@ const get = (req, res) => {
 const getByName = (req, res) => {
   dbHelpers.get100ByName(req.query.name)
   .then((data) => {
+    cache.setex(req.query.name, 3000, JSON.stringify(data));
     res.status(200).send(data)
   })
   .catch((err) => {
     res.status(404).send(err);
   })
+}
+
+const getIdCached = (req, res) => {
+  cache.get(req.params.id, (err, result) => {
+    if (result) {
+      res.status(200).send(JSON.parse(result));
+    } else {
+      get(req, res);
+    }
+  });
+}
+
+const getNameCached = (req, res) => {
+  cache.get(req.query.name, (err, result) => {
+    if (result) {
+      res.status(200).send(JSON.parse(result));
+    } else {
+      getByName(req, res);
+    }
+  });
 }
 
 const post = (req, res) => {
@@ -61,4 +84,4 @@ const remove = (req, res) => {
     })
 }
 
-module.exports = { get, getByName, remove, put, post };
+module.exports = { getIdCached, getNameCached, remove, put, post };
