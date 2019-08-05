@@ -22,6 +22,7 @@
     "react-icons": "^3.7.0",
     "react-id-swiper": "^2.3.1",
     "react-image-magnify": "^2.7.4",
+    "redis": "^2.8.0",
     "swiper": "^4.5.0"
   },
   "homepage": "https://github.com/unclesam-hr/component-jj#readme"
