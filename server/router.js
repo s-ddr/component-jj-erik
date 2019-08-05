@@ -4,7 +4,7 @@ const controllers = require('./controllers.js');
 
 router
   .route('/product/:id')
-  .get(controllers.get)
+  .get(controllers.getIdCached)
   .delete(controllers.remove)
   .put(controllers.put);
 
@@ -14,7 +14,7 @@ router
 
 router
   .route('/product:name?')  
-  .get(controllers.getByName)
+  .get(controllers.getNameCached)
 
 router.route('*.js.gz')
   .get((req, res, next) => {
